@@ -2,12 +2,15 @@ package com.example.uranus_rangga.pertemuan_4
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.uranus_rangga.MainActivity
 import com.example.uranus_rangga.databinding.ActivityFourthBinding
+import com.google.android.material.dialog.MaterialAlertDialogBuilder
+import com.google.android.material.snackbar.Snackbar
 
 class FourthActivity : AppCompatActivity() {
 
@@ -20,17 +23,59 @@ class FourthActivity : AppCompatActivity() {
         binding = ActivityFourthBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        Log.e("onCreate", "FourthActivity dibuat pertama kali")
+
         ViewCompat.setOnApplyWindowInsetsListener(binding.main) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
 
-        // Aksi saat tombol Kembali diklik -> menuju MainActivity
+        val name = intent.getStringExtra("name")
+        val from = intent.getStringExtra("from")
+        val age = intent.getIntExtra("age", 0)
+        Log.e("Data Intent", "Nama: $name , Usia: $age, Asal: $from")
+
+        // 1. Menampilkan Snackbar
+        binding.btnShowSnackbar.setOnClickListener {
+            Snackbar.make(binding.root, "Ini adalah Snackbar", Snackbar.LENGTH_SHORT)
+                .setAction("Tutup") {
+                    Log.e("Info Snackbar", "Snackbar ditutup")
+                }
+                .show()
+        }
+
+        // 2. Menampilkan MaterialAlertDialog
+        binding.btnShowAlertDialog.setOnClickListener {
+            MaterialAlertDialogBuilder(this)
+                .setTitle("Konfirmasi")
+                .setMessage("Apakah Anda yakin ingin melanjutkan?")
+                .setPositiveButton("Ya") { dialog, _ ->
+                    dialog.dismiss()
+                    Log.e("Info Dialog", "Anda memilih Ya!")
+                }
+                .setNegativeButton("Batal") { dialog, _ ->
+                    dialog.dismiss()
+                    Log.e("Info Dialog", "Anda memilih Tidak!")
+                }
+                .show()
+        }
+
+        // 3. Tombol Kembali
         binding.btnKembali.setOnClickListener {
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
-            finish() // Menutup FourthActivity agar tidak menumpuk di backstack
+            finish()
         }
+    }
+
+    override fun onStart() {
+        super.onStart()
+        Log.e("onStart", "onstart: FourthActivity terlihat di layar")
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        Log.e("onDestroy", "FourthActivity dihapus dari stack")
     }
 }
