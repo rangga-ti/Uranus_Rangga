@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
 
     <uses-permission android:name="android.permission.INTERNET" />
 
@@ -14,9 +13,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Uranus_Rangga">
 
-        <!-- SPLASH SCREEN ACTIVITY SEBAGAI LAUNCHER UTAMA -->
+        <!-- SPLASH SCREEN AS LAUNCHER -->
         <activity
-            android:name=".pertemuan_6.SplashScreenActivity"
+            android:name="com.example.uranus_rangga.pertemuan_6.SplashScreenActivity"
             android:exported="true"
             android:windowSoftInputMode="adjustResize">
             <intent-filter>
@@ -26,7 +25,12 @@
         </activity>
 
         <activity
-            android:name=".MainActivity"
+            android:name="com.example.uranus_rangga.pertemuan_6.MainActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+
+        <activity
+            android:name="com.example.uranus_rangga.pertemuan_6.AuthActivity"
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
 
@@ -57,11 +61,6 @@
 
         <activity
             android:name=".pertemuan_5.WebViewActivity"
-            android:exported="false"
-            android:windowSoftInputMode="adjustResize" />
-
-        <activity
-            android:name=".pertemuan_6.AuthActivity"
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
 

@@ -1,4 +1,4 @@
-package com.example.uranus_rangga
+package com.example.uranus_rangga.pertemuan_6
 
 import android.content.Context
 import android.content.Intent
