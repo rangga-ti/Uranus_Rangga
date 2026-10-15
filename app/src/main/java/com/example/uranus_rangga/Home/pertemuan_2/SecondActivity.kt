@@ -1,4 +1,4 @@
-package com.example.uranus_rangga.pertemuan_2
+package com.example.uranus_rangga.Home.pertemuan_2
 
 import android.os.Bundle
 import android.util.Log

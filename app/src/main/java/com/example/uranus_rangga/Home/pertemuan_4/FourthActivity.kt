@@ -1,5 +1,6 @@
-package com.example.uranus_rangga.pertemuan_4
+package com.example.uranus_rangga.Home.pertemuan_4
 
+import android.R
 import android.os.Bundle
 import android.util.Log
 import android.view.MenuItem
@@ -68,7 +69,7 @@ class FourthActivity : AppCompatActivity() {
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         return when (item.itemId) {
-            android.R.id.home -> {
+            R.id.home -> {
                 onBackPressedDispatcher.onBackPressed()
                 true
             }

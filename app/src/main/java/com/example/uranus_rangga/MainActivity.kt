@@ -10,9 +10,12 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.uranus_rangga.databinding.ActivityMainBinding
-import com.example.uranus_rangga.pertemuan_4.FourthActivity
-import com.example.uranus_rangga.pertemuan_5.FifthActivity
-import com.example.uranus_rangga.pertemuan_6.AuthActivity
+import com.example.uranus_rangga.Home.pertemuan_2.SecondActivity
+import com.example.uranus_rangga.Home.pertemuan_3.ThirdActivity
+import com.example.uranus_rangga.Home.pertemuan_4.FourthActivity
+import com.example.uranus_rangga.Home.pertemuan_5.FifthActivity
+import com.example.uranus_rangga.Home.pertemuan_6.AuthActivity
+import com.example.uranus_rangga.Home.pertemuan_7.SeventhActivity
 
 class MainActivity : AppCompatActivity() {
 
@@ -34,6 +37,19 @@ class MainActivity : AppCompatActivity() {
             insets
         }
 
+        // Navigasi Ke Pertemuan 2
+        binding.btnToSecond.setOnClickListener {
+            val intent = Intent(this, SecondActivity::class.java)
+            startActivity(intent)
+        }
+
+        // Navigasi Ke Pertemuan 3
+        binding.btnToThird.setOnClickListener {
+            val intent = Intent(this, ThirdActivity::class.java)
+            startActivity(intent)
+        }
+
+        // Navigasi Ke Pertemuan 4
         binding.btnToFourth.setOnClickListener {
             val intent = Intent(this, FourthActivity::class.java)
             intent.putExtra("name", "Politeknik Caltex Rumbai")
@@ -42,8 +58,21 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+        // Navigasi Ke Pertemuan 5
         binding.btnToFifth.setOnClickListener {
             val intent = Intent(this, FifthActivity::class.java)
+            startActivity(intent)
+        }
+
+        // Navigasi Ke Pertemuan 6
+        binding.btnToSixth.setOnClickListener {
+            val intent = Intent(this, AuthActivity::class.java)
+            startActivity(intent)
+        }
+
+        // Navigasi Ke Pertemuan 7
+        binding.btnToSeventh.setOnClickListener {
+            val intent = Intent(this, SeventhActivity::class.java)
             startActivity(intent)
         }
 
