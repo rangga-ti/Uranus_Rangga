@@ -1,11 +1,11 @@
 package com.example.uranus_rangga.pertemuan_6
 
-
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.lifecycleScope
+import com.example.uranus_rangga.MainActivity // TAMBAHKAN IMPORT INI
 import com.example.uranus_rangga.databinding.ActivitySplashScreenBinding
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch

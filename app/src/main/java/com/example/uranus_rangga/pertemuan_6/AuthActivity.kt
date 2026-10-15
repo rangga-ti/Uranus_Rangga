@@ -5,6 +5,7 @@ import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
+import com.example.uranus_rangga.MainActivity // TAMBAHKAN IMPORT INI
 import com.example.uranus_rangga.databinding.ActivityAuthBinding
 
 class AuthActivity : AppCompatActivity() {

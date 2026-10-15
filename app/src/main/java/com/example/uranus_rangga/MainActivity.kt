@@ -1,4 +1,4 @@
-package com.example.uranus_rangga.pertemuan_6
+package com.example.uranus_rangga
 
 import android.content.Context
 import android.content.Intent
@@ -12,6 +12,7 @@ import androidx.core.view.WindowInsetsCompat
 import com.example.uranus_rangga.databinding.ActivityMainBinding
 import com.example.uranus_rangga.pertemuan_4.FourthActivity
 import com.example.uranus_rangga.pertemuan_5.FifthActivity
+import com.example.uranus_rangga.pertemuan_6.AuthActivity
 
 class MainActivity : AppCompatActivity() {
 
@@ -35,7 +36,7 @@ class MainActivity : AppCompatActivity() {
 
         binding.btnToFourth.setOnClickListener {
             val intent = Intent(this, FourthActivity::class.java)
-            intent.putExtra("name", "Politeknik Caltex Riau")
+            intent.putExtra("name", "Politeknik Caltex Rumbai")
             intent.putExtra("from", "Rumbai")
             intent.putExtra("age", 25)
             startActivity(intent)
